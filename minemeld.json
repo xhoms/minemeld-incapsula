@@ -1,0 +1,16 @@
+{
+  "version": "0.1",
+  "name": "incapsula-miner",
+  "author": "Palo Alto Networks",
+  "author_email": "techbizdev@paloaltonetworks.com",
+  "description": "MineMeld node extension to capture Incapsula public IP scope.",
+  "entry_points": {
+    "minemeld_nodes": {
+      "incapsula.Miner": "incapsula.node:Miner"
+    },
+    "minemeld_prototypes": {
+      "incapsula.prototypes": "incapsula:prototypes"
+    }
+  },
+  "manifest_version": 0
+}

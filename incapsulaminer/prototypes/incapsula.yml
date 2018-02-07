@@ -1,0 +1,30 @@
+url: https://github.com/PaloAltoNetworks/wildcardipv4-miner
+description: >
+  Incapsula public IP Space
+
+prototypes:
+  miner:
+    author: Palo Alto Networks TBD
+    class: incapsula.Miner
+    development_status: EXPERIMENTAL
+    node_type: miner
+    indicator_types:
+      - IPv4
+      - IPv6
+    tags:
+      - extension
+      - incapsula
+    description: >
+      MineMeld node extension to capture Incapsula public IP scope
+    config:
+      url: https://my.incapsula.com/api/integration/v1/ips
+      interval: 86400
+      # age out of indicators
+      age_out:
+        sudden_death: true
+        interval: 86400
+        default: null
+      # flag indicators with share level green
+      attributes:
+        share_level: green
+        confidence: 100
